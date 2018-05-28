@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:u="http://www.felix.com/schema/user"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+          http://www.springframework.org/schema/p
+          http://www.springframework.org/schema/p/spring-p-4.2.xsd
+          http://www.felix.com/schema/user
+          http://www.felix.com/schema/user.xsd
+          ">
+       <bean id="pojo" class="adj.felix.spring.resource.Pojo" p:age="10" p:name-ref="name" scope="prototype"/>
+       <import resource="sub.xml"/>
+       
+       <u:user id="user" name="user-name" age="10"/>
+</beans>
